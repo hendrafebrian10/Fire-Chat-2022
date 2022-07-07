@@ -16,6 +16,7 @@ class RegistrationController: UIViewController{
         button.setImage(#imageLiteral(resourceName: "add"), for: . normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
+        button.clipsToBounds = true
         return button
     }()
     
@@ -81,7 +82,9 @@ class RegistrationController: UIViewController{
     // Selector
     
     @objc func handleSelectPhoto(){
-        print("Select ypur photo")
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @objc func handleSignUp(){
@@ -117,4 +120,16 @@ class RegistrationController: UIViewController{
         alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom:12)
     }
     
+}
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        plusPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 3.0
+        plusPhotoButton.layer.cornerRadius = 150 / 2
+        plusPhotoButton.imageView?.contentMode = .scaleAspectFill
+        dismiss(animated: true, completion: nil)
+    }
 }
