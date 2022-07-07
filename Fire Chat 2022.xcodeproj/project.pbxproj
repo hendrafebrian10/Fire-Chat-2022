@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EF946DECAC411DB46AC3DAB /* Pods_Fire_Chat_2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F196C229E449E7FEBBF75AC8 /* Pods_Fire_Chat_2022.framework */; };
 		9122565F2876168700CDB103 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122565E2876168700CDB103 /* LoginViewModel.swift */; };
 		9122566128767B4F00CDB103 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122566028767B4F00CDB103 /* RegistrationViewModel.swift */; };
+		91225668287688BA00CDB103 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91225667287688BA00CDB103 /* GoogleService-Info.plist */; };
 		91FE81132875301600B13A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE81122875301600B13A92 /* AppDelegate.swift */; };
 		91FE81152875301600B13A92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE81142875301600B13A92 /* SceneDelegate.swift */; };
 		91FE81172875301600B13A92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE81162875301600B13A92 /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 /* Begin PBXFileReference section */
 		9122565E2876168700CDB103 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9122566028767B4F00CDB103 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		91225667287688BA00CDB103 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		91FE810F2875301600B13A92 /* Fire Chat 2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fire Chat 2022.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FE81122875301600B13A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FE81142875301600B13A92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		91FE81352875AC0400B13A92 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		91FE81372875FA5400B13A92 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		91FE81392876095600B13A92 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		92594E52EEB866A821D86F23 /* Pods-Fire Chat 2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fire Chat 2022.debug.xcconfig"; path = "Target Support Files/Pods-Fire Chat 2022/Pods-Fire Chat 2022.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0C04BC1E584BB243AAA32D /* Pods-Fire Chat 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fire Chat 2022.release.xcconfig"; path = "Target Support Files/Pods-Fire Chat 2022/Pods-Fire Chat 2022.release.xcconfig"; sourceTree = "<group>"; };
+		F196C229E449E7FEBBF75AC8 /* Pods_Fire_Chat_2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fire_Chat_2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +55,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF946DECAC411DB46AC3DAB /* Pods_Fire_Chat_2022.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05DF27BF8ACAA7565337D337 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92594E52EEB866A821D86F23 /* Pods-Fire Chat 2022.debug.xcconfig */,
+				CC0C04BC1E584BB243AAA32D /* Pods-Fire Chat 2022.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9122566228767B5B00CDB103 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +86,8 @@
 			children = (
 				91FE81112875301600B13A92 /* Fire Chat 2022 */,
 				91FE81102875301600B13A92 /* Products */,
+				05DF27BF8ACAA7565337D337 /* Pods */,
+				D1B9D2D60BAECCA04CD66731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +116,7 @@
 				91FE811D2875301800B13A92 /* LaunchScreen.storyboard */,
 				91FE81202875301800B13A92 /* Info.plist */,
 				91FE81392876095600B13A92 /* Storyboard.storyboard */,
+				91225667287688BA00CDB103 /* GoogleService-Info.plist */,
 			);
 			path = "Fire Chat 2022";
 			sourceTree = "<group>";
@@ -158,6 +178,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		D1B9D2D60BAECCA04CD66731 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F196C229E449E7FEBBF75AC8 /* Pods_Fire_Chat_2022.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91FE81232875301800B13A92 /* Build configuration list for PBXNativeTarget "Fire Chat 2022" */;
 			buildPhases = (
+				319836A1C6A694049C9A397F /* [CP] Check Pods Manifest.lock */,
 				91FE810B2875301600B13A92 /* Sources */,
 				91FE810C2875301600B13A92 /* Frameworks */,
 				91FE810D2875301600B13A92 /* Resources */,
+				607054034E5D0163FB748291 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,12 +248,55 @@
 			files = (
 				91FE811F2875301800B13A92 /* LaunchScreen.storyboard in Resources */,
 				91FE813A2876095600B13A92 /* Storyboard.storyboard in Resources */,
+				91225668287688BA00CDB103 /* GoogleService-Info.plist in Resources */,
 				91FE811C2875301800B13A92 /* Assets.xcassets in Resources */,
 				91FE811A2875301600B13A92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		319836A1C6A694049C9A397F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fire Chat 2022-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		607054034E5D0163FB748291 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fire Chat 2022/Pods-Fire Chat 2022-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fire Chat 2022/Pods-Fire Chat 2022-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fire Chat 2022/Pods-Fire Chat 2022-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91FE810B2875301600B13A92 /* Sources */ = {
@@ -384,6 +457,7 @@
 		};
 		91FE81242875301800B13A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92594E52EEB866A821D86F23 /* Pods-Fire Chat 2022.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -412,6 +486,7 @@
 		};
 		91FE81252875301800B13A92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0C04BC1E584BB243AAA32D /* Pods-Fire Chat 2022.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
