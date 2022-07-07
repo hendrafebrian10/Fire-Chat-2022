@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol AuthenticationControllerProtocol {
+    func checkFormStatus()
+}
+
 class RegistrationController: UIViewController{
     
     // Properties
+    
+    private var viewModel = RegistartionViewModel()
     
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -76,6 +82,7 @@ class RegistrationController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObserver()
     }
 
     
@@ -94,8 +101,25 @@ class RegistrationController: UIViewController{
     @objc func handleShowLogin(){
         navigationController?.popViewController(animated: true)
     }
+    
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        } else if sender == userNameTextField {
+            viewModel.username = sender.text
+        } else if sender == fullNameTextField {
+            viewModel.fullname = sender.text
+        }
+        
+        checkFormStatus()
+    }
                          
     // Helper
+    
+
+
     func configureUI() {
         configureGradientLayer()
         
@@ -120,7 +144,16 @@ class RegistrationController: UIViewController{
         alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom:12)
     }
     
+    func configureNotificationObserver() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        userNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+    
 }
+
+// Extension
 
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -131,5 +164,17 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         plusPhotoButton.layer.cornerRadius = 150 / 2
         plusPhotoButton.imageView?.contentMode = .scaleAspectFill
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension RegistrationController :AuthenticationControllerProtocol {
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            signUpButton.isEnabled = true
+            signUpButton.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        } else {
+            signUpButton.isEnabled = false
+            signUpButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        }
     }
 }

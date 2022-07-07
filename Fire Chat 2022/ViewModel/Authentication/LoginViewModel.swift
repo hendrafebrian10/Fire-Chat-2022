@@ -7,6 +7,9 @@
 
 import Foundation
 
+protocol AuthenticationProtocol {
+    var formIsValid: Bool {get}
+}
 struct LoginViewModel {
     var email: String?
     var password: String?
